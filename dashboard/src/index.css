@@ -676,6 +676,7 @@ hr {
   border-bottom: 0.8px solid rgb(235, 234, 234);
   padding: 12px 10px 12px 14px;
   position: relative;
+  cursor: pointer;
 }
 
 .item {
@@ -738,6 +739,7 @@ hr {
   color: #fff;
   font-weight: 400;
   font-size: 0.8rem;
+  height: 1.75rem;
   border: 0.7px solid #4184f3;
 }
 
@@ -746,11 +748,23 @@ hr {
   color: #fff;
   font-weight: 400;
   font-size: 0.8rem;
+  height: 1.75rem;
   border: 0.7px solid #ff5722;
+}
+
+.more {
+  background-color: #87a713;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8rem;
+  height: 1.75rem;
+  border: 0.7px solid rgb(222, 155, 155);
 }
 
 .action {
   background-color: #fff;
+  font-size: 0.8rem;
+  height: 1.75rem;
   border: 0.7px solid #9b9b9b;
 }
 
