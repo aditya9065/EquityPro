@@ -9,13 +9,22 @@ const cookieParser = require('cookie-parser');
 const {HoldingsModel} = require('./model/HoldingsModel')
 const {OrdersModel} = require('./model/OrdersModel');
 const {PositionsModel} = require('./model/PositionsModel');
-const { Signup } = require('./Controllers/AuthController');
+const { Signup, Login } = require('./Controllers/AuthController');
+const { userVerification } = require('./Middlewares/AuthMiddleware');
 
 const PORT = process.env.PORT || 8080;
 const URL = process.env.MONGO_URL;
 
-app.use(cors())
+app.use(cors(
+  {
+    origin: ["http://localhost:5173"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }
+));
 app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(express.json());
 
 app.get("/allHoldings", async(req, res) => {
   let allHoldings = await HoldingsModel.find({});
@@ -45,6 +54,8 @@ app.get('/allOrders', async(req, res) => {
 });
 
 app.post('/signup', Signup);
+app.post('/login', Login);
+app.post('/',userVerification)
 
 // app.get("/addHoldings", async(req, res)=>{
 //     let tempHoldings = [

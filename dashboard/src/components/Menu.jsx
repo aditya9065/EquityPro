@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom'
 
 const Menu = () => {
@@ -15,6 +15,18 @@ const Menu = () => {
 
   const menuClass = "menu";
   const activeMenuClasss = "menu selected"
+
+
+  const [username, setUsername] = useState('');
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const usernameParam = params.get('username');
+
+        if (usernameParam) {
+            setUsername(decodeURIComponent(usernameParam));
+        }
+    }, []);
 
   return (
     <div className="menu-container">
@@ -42,8 +54,8 @@ const Menu = () => {
         </ul>
         <hr />
         <div className="profile pb-3">
-          <div className="avatar">ZU</div>
-          <p className="username pt-3">USERID</p>
+          <div className="avatar">{username[0]}</div>
+          <p className="username pt-3">{username}</p>
         </div>
       </div>
     </div>
