@@ -31,7 +31,7 @@ function Login() {
         e.preventDefault();
         try {
           const { data } = await axios.post(
-            "http://localhost:8080/login",
+            "https://backend-service-equitypro.onrender.com/login",
             {
               ...inputValue,
             },
@@ -45,7 +45,7 @@ function Login() {
               console.log(username)
             //   navigate("/");
             const encodedUsername = encodeURIComponent(username);
-            window.location.href =  `http://localhost:5174?username=${encodedUsername}`;
+            window.location.href =  `equity-pro-dashboard-kn1difrvo.vercel.app?username=${encodedUsername}`;
             }, 1000);
           } else {
             handleError(message);

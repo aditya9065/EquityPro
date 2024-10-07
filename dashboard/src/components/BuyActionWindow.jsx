@@ -14,7 +14,7 @@ const BuyActionWindow = ({ uid }) => {
 
   const handleBuyClick = () => {
     console.log("jhi",uid);
-    axios.post("http://localhost:8080/newOrder", {
+    axios.post("https://backend-service-equitypro.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

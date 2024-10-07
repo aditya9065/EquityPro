@@ -17,7 +17,7 @@ const URL = process.env.MONGO_URL;
 
 app.use(cors(
   {
-    origin: ["http://localhost:5173" , "http://localhost:5174"],
+    origin: ["http://localhost:5173" , "http://localhost:5174", "equity-pro-dashboard-kn1difrvo.vercel.app", "equity-rkid5nobj-aditya-kumar-singhs-projects-c2781cc1.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }

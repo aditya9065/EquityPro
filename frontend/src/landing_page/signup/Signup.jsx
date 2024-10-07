@@ -39,7 +39,7 @@ function Signup() {
         e.preventDefault();
         try {
             const { data } = await axios.post(
-              "http://localhost:8080/signup",
+              "https://backend-service-equitypro.onrender.com/signup",
               {
                 ...inputValue,
               },
@@ -51,7 +51,7 @@ function Signup() {
               handleSuccess(message);
               setTimeout(() => {
                 const encodedUsername = encodeURIComponent(username);
-                window.location.href =  `http://localhost:5174?username=${encodedUsername}`;
+                window.location.href =  `equity-pro-dashboard-kn1difrvo.vercel.app?username=${encodedUsername}`;
               }, 1000);
             } else {
               handleError(message);
