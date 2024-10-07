@@ -51,7 +51,7 @@ function Signup() {
               handleSuccess(message);
               setTimeout(() => {
                 const encodedUsername = encodeURIComponent(username);
-                window.location.href =  `equity-pro-dashboard-kn1difrvo.vercel.app?username=${encodedUsername}`;
+                window.location.href =  `https://equity-pro-dashboard-kn1difrvo.vercel.app?username=${encodedUsername}`;
               }, 1000);
             } else {
               handleError(message);
