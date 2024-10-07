@@ -12,7 +12,7 @@ const {PositionsModel} = require('./model/PositionsModel');
 const { Signup, Login } = require('./Controllers/AuthController');
 const { userVerification } = require('./Middlewares/AuthMiddleware');
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 const URL = process.env.MONGO_URL;
 
 app.use(cors(
