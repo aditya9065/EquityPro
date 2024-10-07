@@ -45,7 +45,7 @@ function Login() {
               console.log(username)
             //   navigate("/");
             const encodedUsername = encodeURIComponent(username);
-            window.location.href =  `https://equity-pro-dashboard-kn1difrvo.vercel.app?username=${encodedUsername}`;
+            window.location.href =  `https://equity-pro-dashboard.vercel.app?username=${encodedUsername}`;
             }, 1000);
           } else {
             handleError(message);
