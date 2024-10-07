@@ -38,10 +38,11 @@ function Login() {
             { withCredentials: true }
           );
           console.log(data);
-          const { success, message } = data;
+          const { success, message, username } = data;
           if (success) {
             handleSuccess(message);
             setTimeout(() => {
+              console.log(username)
             //   navigate("/");
             const encodedUsername = encodeURIComponent(username);
             window.location.href =  `http://localhost:5174?username=${encodedUsername}`;
