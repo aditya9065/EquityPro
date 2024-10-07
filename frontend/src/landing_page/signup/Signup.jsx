@@ -119,7 +119,7 @@ function Signup() {
             Sign Up
           </button>
         </div>
-      <p className="text-center mb-4">All ready have an account ? <Link to="/login">Log in</Link></p>
+      <p className="text-center mb-4">All ready have an account ? <Link to="/login">Log in.</Link></p>
       </form>
       <ToastContainer/>
     </div>
